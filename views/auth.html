@@ -1,0 +1,39 @@
+<header>
+    <menu>
+        <ul>
+            <li id="title_named">Регистрация и Авторизация</li>
+            <li>
+                <a href="#">Главная</a>
+            </li>
+            <li>
+                <a href="#">Регистрация</a>
+            </li>
+            <li>
+                <a href="#">Войти</a>
+            </li>
+            <li>
+                <a href="#">Список пользователей</a>
+            </li>
+        </ul>
+    </menu>
+</header>
+<main>
+    <div class="login_access" token="<%- der %>"></div>
+    <div class="container">
+        <div class="reg">
+            <form action="/register" method="POST">
+                <input type="text" placeholder="Введи логин" name="login_register" required>
+                <input type="password" title="Введите пароль" placeholder="Пароль" name="pass_register" required>
+                <input type="submit" value="3арегистрироваться" id="toRegister" required>
+            </form>
+        </div>
+        <div class="login">
+                <form action="/login" method="POST">
+                        <input type="text" id="login_input" placeholder="Введи логин" name="login" required>
+                        <input type="password" id="password_input" title="Введите пароль" placeholder="Пароль" name="password" required>
+                        <input type="submit" value="Войти" id="toLogin">
+                    </form>
+
+        </div>
+    </div>
+</main>

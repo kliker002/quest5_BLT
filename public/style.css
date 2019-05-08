@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+}
+header{
+    text-align: center;
+}
+menu{
+    margin: 0px;
+}
+menu ul{
+    margin: 0px;
+}
+menu ul li{
+    display: inline-block;
+    margin: 0px 10px 0px 10px;
+    padding: 30px;
+    
+}
+menu ul li:hover{
+    background-color: coral;
+    cursor: pointer;
+}
+menu ul li a{
+    text-decoration: none;
+    color: #000 !important;
+    font-size: 16pt;
+}
+#title_named{
+    background-color: coral;
+    font-size: 16pt;
+}
+#title_named:hover{}
+
+main{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 16pt;
+}
+main .appeal{
+    margin: 15px;
+}
+main .content .adds{
+    text-align: center;
+    margin-bottom: 15px;
+}
+main .content .imgs img{
+    width: 180px;
+}
+main .content .videos{
+    
+}
+main .container{
+    width: 1200px;
+    background-color: red;
+    margin: 100px auto;
+
+}
+main .container .login{
+    float:left;
+    width: 50%;
+}
+main .container .login input{
+    display: block;
+    width: 80%;
+    margin: 15px;
+    height: 30px;
+    border-radius: 5px;
+}
+#toLogin{
+    color: white;
+    background-color: #00FF7F;
+    padding: 0px;
+    font-size: 16pt;
+}
+main .container .login input:target{
+    box-shadow: 10px 5px 5px #75bbfd;
+}
+main .container .reg input{
+    display: block;
+    width: 80%;
+    margin: 15px;
+    height: 30px;
+    border-radius: 5px;
+}
+#toReg{
+    color: white;
+    background-color: #00FF7F;
+    padding: 0px;
+    font-size: 16pt;
+}
+main .container .reg input:target{
+    box-shadow: 10px 5px 5px #75bbfd;
+}
+main .container .reg{
+    float:right;
+    width: 50%;
+}
+main .login_access{
+    display: block;
+}
