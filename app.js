@@ -8,6 +8,7 @@ const bodyParser = require('koa-bodyparser');
 
 const Sequelize = require('sequelize');
 
+//изменить на свой путь
 const db = new Sequelize('postgres://qggphiqa:ENw4vvFkHD_HvOWCLyVjK-bq7IYu_zf5@balarama.db.elephantsql.com:5432/qggphiqa');
 
 const app = new Koa();
@@ -15,6 +16,7 @@ const router = KoaRouter();
 
 var login_access = 0; // Токен служит для подтверждения входа
 var arrUsers = []; // для отображения всех юзеров на странице /data
+var userName = 'null';
 
 const users = db.define('users',{ //определение таблицы
     login: Sequelize.STRING,
@@ -50,7 +52,9 @@ router.post('/login', toLogin);
 router.get('/login', toLogin);
 router.get('/data', data_db);
 async function index(ctx){
-    await ctx.render('index');
+    await ctx.render('index', {
+        der: userName
+    });
 }
 async function auth_page(ctx){
     await ctx.render('auth', {
@@ -78,6 +82,7 @@ async function toLogin(ctx){
         }
     }).then(user => {
         login_access = 1;// для нотификейшена на стороне клиента
+        userName = user.login;
         console.log(`Selected user: "${user.login}" with password: "${user.password}"`);
     });
     ctx.redirect('/auth/');

@@ -4,3 +4,6 @@ var appeal = new Vue({
         person: 'Гость'
     }
 });
+if(document.getElementById('token_person').getAttribute('token') != 'null'){
+    appeal._data.person = document.getElementById('token_person').getAttribute('token');
+}
