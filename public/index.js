@@ -7,7 +7,7 @@ if (parseInt(flag_access[0].getAttribute('token')) == 1) { //Проверка н
     flag_access[0].style.opacity = 0;
     timerInterval = setInterval(function () {
         ChangeOpacity();
-    }, 100);
+    }, 0.500);
 }
 function ChangeOpacity() { //отображение нотификейшена о входе
     var object = flag_access[0];

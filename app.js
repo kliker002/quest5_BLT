@@ -59,7 +59,7 @@ async function auth_page(ctx){
 }
 async function data_db(ctx){
     //получение всех юзеров
-    var arrUsersModel = users.findAll({}).then(user => {
+    var arrUsersModel = await users.findAll({}).then(user => {
         arrUsers = user;
     })
     await ctx.render('data',{
@@ -71,7 +71,7 @@ async function register_page(ctx){
 }
 async function toLogin(ctx){
     const body = ctx.request.body;
-    var user = users.findOne({ //поиск в бд по требованиям
+    var user = await users.findOne({ //поиск в бд по требованиям
         where:{
             login: body.login,
             password: body.password
